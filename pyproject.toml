@@ -10,26 +10,13 @@ authors = [{name = "boxi contributors"}]
 readme = "README.md"
 license = {text = "MIT"}
 requires-python = ">=3.10"
-keywords = ["pentest", "ctf", "security", "automation"]
-classifiers = [
-    "Development Status :: 3 - Alpha",
-    "Environment :: Console",
-    "Intended Audience :: Information Technology",
-    "License :: OSI Approved :: MIT License",
-    "Operating System :: POSIX :: Linux",
-    "Operating System :: MacOS",
-    "Programming Language :: Python :: 3",
-    "Programming Language :: Python :: 3.10",
-    "Programming Language :: Python :: 3.11",
-    "Programming Language :: Python :: 3.12",
-    "Topic :: Security",
-    "Topic :: System :: Penetration Testing",
-]
+keywords = ["penetration testing", "pentest", "ctf", "security"]
 
 dependencies = [
-    "typer[all]>=0.9.0",
+    "typer[all]>=0.8.0,<0.9.0",
     "rich>=13.0.0",
     "pydantic>=2.0.0",
+    "pydantic-settings>=2.0.0",
     "python-dotenv>=1.0.0",
 ]
 
@@ -37,9 +24,9 @@ dependencies = [
 boxi = "boxi.cli:app"
 
 [project.urls]
-Homepage = "https://github.com/example/boxi"
-Repository = "https://github.com/example/boxi"
-Issues = "https://github.com/example/boxi/issues"
+Homepage = "https://github.com/summerlinryan/boxi"
+Repository = "https://github.com/summerlinryan/boxi"
+Issues = "https://github.com/summerlinryan/boxi/issues"
 
 [tool.poetry]
 name = "boxi"
@@ -52,9 +39,10 @@ packages = [{include = "boxi", from = "src"}]
 
 [tool.poetry.dependencies]
 python = "^3.10"
-typer = {extras = ["all"], version = "^0.9.0"}
+typer = {extras = ["all"], version = ">=0.8.0,<0.9.0"}
 rich = "^13.0.0"
 pydantic = "^2.0.0"
+pydantic-settings = "^2.0.0"
 python-dotenv = "^1.0.0"
 
 [tool.poetry.group.dev.dependencies]

@@ -1,0 +1,32 @@
+# Demo Boxi Interactive Console Session
+
+# Start with target
+$ boxi 10.10.10.10
+
+# Console shows:
+# - Welcome banner with version
+# - Target automatically set to 10.10.10.10
+# - Prompt shows: boxi(10.10.10.10) >
+
+# Commands you can try:
+help                          # Show all available commands
+info                          # Show current target info
+run                           # Start assessment (creates DB entry)
+status                        # Show assessment progress
+creds admin:password123       # Add credentials for testing
+ignore "*.tmp"                # Add ignore patterns
+hint "check backup directory" # Add hints for assessment
+show creds                    # Show stored credentials
+show hints                    # Show stored hints
+stop                          # Stop current assessment
+clear                         # Clear screen
+exit                          # Exit console
+
+# Example session flow:
+boxi(10.10.10.10) > info
+boxi(10.10.10.10) > run
+boxi(10.10.10.10) > creds admin:password123
+boxi(10.10.10.10) > hint "focus on SMB shares"
+boxi(10.10.10.10) > show creds
+boxi(10.10.10.10) > status
+boxi(10.10.10.10) > exit
