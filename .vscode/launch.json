@@ -1,0 +1,48 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug Boxi Console",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "boxi.cli",
+      "args": ["console"],
+      "console": "integratedTerminal",
+      "justMyCode": false,
+      "cwd": "${workspaceFolder}",
+      "env": {
+        "PYTHONPATH": "${workspaceFolder}/src"
+      },
+      "stopOnEntry": false,
+      "autoReload": {
+        "enable": true
+      }
+    },
+    {
+      "name": "Debug Boxi Console (External Terminal)",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "boxi.cli",
+      "args": ["console"],
+      "console": "externalTerminal",
+      "justMyCode": false,
+      "cwd": "${workspaceFolder}",
+      "env": {
+        "PYTHONPATH": "${workspaceFolder}/src"
+      }
+    },
+    {
+      "name": "Debug Boxi with Target",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "boxi.cli",
+      "args": ["console", "192.168.1.100"],
+      "console": "integratedTerminal",
+      "justMyCode": false,
+      "cwd": "${workspaceFolder}",
+      "env": {
+        "PYTHONPATH": "${workspaceFolder}/src"
+      }
+    }
+  ]
+}
